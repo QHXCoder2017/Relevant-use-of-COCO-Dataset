@@ -1,4 +1,4 @@
-# 提取COCO关键点并保存在h5文件中 Date: 2018.11.22
+# 从COCO的json文件中提取关键点并保存在h5文件中
 
 from pycocotools.coco import COCO
 import numpy as np
