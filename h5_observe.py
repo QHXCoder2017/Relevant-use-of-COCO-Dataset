@@ -1,7 +1,7 @@
 import h5py
 
-f = h5py.File('path/filename.h5', 'r')
 
+f = h5py.File('path/filename.h5', 'r')
 for k in f.keys():
     print(k)
 
@@ -11,4 +11,3 @@ p = f['part']
 print(b.shape)
 print(i.shape)
 print(p.shape)
-
