@@ -5,14 +5,14 @@ import numpy as np
 # 读取h5信息
 f = h5py.File('/path/filename.h5', 'r')
 for k in f.keys():
-    print(k)
+    #print(k)
 bnds1 = f['bndbox'].value
 imgs1 = f['imgname'].value
 parts1 = f['part'].value
-
 f = h5py.File('/path/filename.h5', 'r')
+
 for k in f.keys():
-    print(k)
+    #print(k)
 bnds2 = f['bndbox'].value
 imgs2 = f['imgname'].value
 parts2 = f['part'].value
@@ -20,8 +20,8 @@ parts2 = f['part'].value
 # 融合两个h5文件的imgname
 imgs = np.append(imgs1, imgs2)
 imgs = imgs.tolist()
-
 h5_imgs = []
+
 for k in range(len(imgs)):
     if (k % 16 == 0):
         tep2 = []
@@ -33,8 +33,8 @@ h5_imgs = np.array(h5_imgs)
 # 融合两个h5文件的boundingbox
 bnds = np.append(bnds1, bnds2)
 bnds = bnds.tolist()
-
 h5_bnds = []
+
 for k in range(len(bnds)):
     if (k % 4 == 0):
         tmp1 = []
@@ -52,6 +52,7 @@ parts = parts.astype(np.int)
 parts = parts.tolist()
 h5_parts = []
 tkp1 = []
+
 for k in range(len(parts)):
     if (k % 2 == 0):
         tkp = []
@@ -72,4 +73,3 @@ h5file = h5py.File('/path/filename.h5', 'w')
 h5file.create_dataset('imgname', data=h5_imgs)
 h5file.create_dataset('bndbox',data=h5_bnds)
 h5file.create_dataset('part',data=h5_parts)
-
