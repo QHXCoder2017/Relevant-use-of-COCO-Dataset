@@ -1,2 +1,4 @@
 # Relevant-use-of-COCO-Dataset
-Hi guys, there are some Python code that I wrote in my project to process json, h5, txt file on COCO Dataset.
+
+extract_images.py is to extract the pictures that have appeared in the txt file to another folder.
+h5_create.py is to merge two h5 files.
