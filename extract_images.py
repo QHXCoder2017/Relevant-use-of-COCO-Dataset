@@ -21,7 +21,7 @@ for i in range(0, len(lst)):
             shutil.copy(path, dstdir)
 
 time2 = time.time()
-print('time:', time2 - time1)
+print('time cost : %.2f min' %((time2 - time1)/60))
 print('well done!')
 
 time1 = time.time()
