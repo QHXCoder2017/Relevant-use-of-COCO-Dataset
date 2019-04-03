@@ -24,5 +24,5 @@ for i in imgIds:
     plt.savefig('/path/GT/%s'% (i))
     plt.close()
     
-time2=time.time()
-print('spent t = %.2f min' % ((time2-time1)/60))
+time2 = time.time()
+print('spent t = %.2f min' % ((time2-time1) / 60))
