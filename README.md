@@ -7,4 +7,5 @@
 * h5_split.py is to reduce the number of data in h5 files;
 * images_to_txt.py is to write images information to txt file;
 * json_to_txt.py is to write the information in the json file to the txt file;
-* GT_show.py is to draw the ground truth of the COCO dataset or your own dataset(json and images are needed).
+* GT_show.py is to draw the ground truth of the COCO dataset or your own dataset(json and images are needed);
+* AP-eval.py is to get the AP score(the GT json is standard COCO json).
